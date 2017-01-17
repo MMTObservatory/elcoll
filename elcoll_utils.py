@@ -33,7 +33,6 @@ def elcoll_plot(data, models=None, mean_temp=False):
             if mean_temp:
                 a.plot(data['el'], models[k](data['el'], np.mean(data['oss'])))
             else:
-                data = data.sort('el')
                 a.plot(data['el'], models[k](data['el'], data['oss']))
         a.set_title(t)
         a.set_ylabel(l)
